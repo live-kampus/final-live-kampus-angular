@@ -1,0 +1,50 @@
+<div class="container">
+        <div class="card event-list">
+            <div class="card-header"><b>Roomspace Details</b></div>
+            <div class="card-body">
+                <div id="tabs" #tabs>
+                    <ul class="nav nav-tabs text-center">
+    
+                    </ul>
+                    <table class="table table-bordered event-table events">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>RoomName</th>
+                                <th></th>
+                                <th></th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  *ngFor="let admin of adminrooms">
+                                <td>{{admin.roomName}}</td>
+                                <td>
+                                    <!-- <button type="button"  routerLink="/view" class="btn btn-primary view-btn" routerLink="view"
+                                        style="float: right">View</button> -->
+                                        <button type="button"  routerLink="view/{{admin.roomName}}" class="btn btn-primary view-btn" style="width: 30%"
+                                        >View</button>
+                                </td>
+                                <!-- <td>
+                                    <button type="button" class="btn btn-primary edit-btn"
+                                        style="float: right">Payment</button>
+                                </td> -->
+                                <td>
+                                    <button type="button" (click)="deleteRoom(admin)" class="btn btn-primary edit-btn"
+                                        >Delete</button>
+                                </td>
+    
+                            </tr>
+    
+                        </tbody>
+    
+                    </table>
+    
+    
+    
+    
+    
+                </div>
+    
+            </div>
+        </div>
+    </div>
